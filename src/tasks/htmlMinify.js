@@ -14,7 +14,7 @@ class HtmlMinifyTask {
 			throw new Error('HtmlMinifyTask: dest is missing from configuration!');
 		}
 
-		this.options.minimize = _.merge({
+		this.options.minimize = Object.assign({
 			empty: true,
 			spare: true,
 			quotes: true

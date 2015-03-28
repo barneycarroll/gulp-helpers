@@ -26,9 +26,9 @@ class NgHtml2JsTask {
 			this.options.prepend = "import angular from 'angular';\n";
 		}
 
-		this.options.compilerOptions = _.merge({}, babel.compilerOptions, this.options.compilerOptions);
+		this.options.compilerOptions =Object.assign({}, babel.compilerOptions, this.options.compilerOptions);
 
-		this.options.minimize = _.merge({
+		this.options.minimize = Object.assign({
 			empty: true,
 			spare: true,
 			quotes: true

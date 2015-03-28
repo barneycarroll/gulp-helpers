@@ -45,9 +45,9 @@ class BabelTask {
 		}
 
 		// Handle defaults
-		this.options.compilerOptions = _.merge({}, defaultCompilerOptions, this.options.compilerOptions);
-		this.options.coffeeOptions = _.merge({bare: true}, this.options.coffeeOptions);
-		this.options.ngAnnotateOptions = _.merge({sourceMap: true}, this.options.ngAnnotateOptions);
+		this.options.compilerOptions = Object.assign({}, defaultCompilerOptions, this.options.compilerOptions);
+		this.options.coffeeOptions = Object.assign({bare: true}, this.options.coffeeOptions);
+		this.options.ngAnnotateOptions = Object.assign({sourceMap: true}, this.options.ngAnnotateOptions);
 
 		return this;
 	}
